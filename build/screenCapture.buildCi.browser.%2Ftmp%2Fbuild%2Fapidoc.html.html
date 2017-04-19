@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/substack/node-falafel#readme"
-
-    >falafel (v2.1.0)</a>
+    <a href="https://github.com/substack/node-falafel#readme">falafel (v2.1.0)</a>
 </h1>
 <h4>transform the ast on a recursive walk</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.falafel">module falafel</a><ol>
 
@@ -86,26 +79,26 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">falafel = function (src, opts, fn) {
-    if (typeof opts === &#x27;function&#x27;) {
+    if (typeof opts === 'function') {
         fn = opts;
         opts = {};
     }
-    if (src &#x26;&#x26; typeof src === &#x27;object&#x27; &#x26;&#x26; src.constructor.name === &#x27;Buffer&#x27;) {
+    if (src &amp;&amp; typeof src === 'object' &amp;&amp; src.constructor.name === 'Buffer') {
         src = src.toString();
     }
-    else if (src &#x26;&#x26; typeof src === &#x27;object&#x27;) {
+    else if (src &amp;&amp; typeof src === 'object') {
         opts = src;
         src = opts.source;
         delete opts.source;
     }
     src = src === undefined ? opts.source : src;
-    if (typeof src !== &#x27;string&#x27;) src = String(src);
+    if (typeof src !== 'string') src = String(src);
     if (opts.parser) parse = opts.parser.parse;
     var ast = parse(src, opts);
 
     var result = {
-        chunks : src.split(&#x27;&#x27;),
-        toString : function () { return result.chunks.join(&#x27;&#x27;) },
+        chunks : src.split(''),
+        toString : function () { return result.chunks.join('') },
         inspect : function () { return result.toString() }
     };
     var index = 0;
@@ -114,17 +107,17 @@
         insertHelpers(node, parent, result.chunks);
 
         forEach(objectKeys(node), function (key) {
-            if (key === &#x27;parent&#x27;) return;
+            if (key === 'parent') return;
 
             var child = node[key];
             if (isArray(child)) {
                 forEach(child, function (c) {
-                    if (c &#x26;&#x26; typeof c.type === &#x27;string&#x27;) {
+                    if (c &amp;&amp; typeof c.type === 'string') {
                         walk(c, node);
                     }
                 });
             }
-            else if (child &#x26;&#x26; typeof child.type === &#x27;string&#x27;) {
+            else if (child &amp;&amp; typeof child.type === 'string') {
                 walk(child, node);
             }
         });
@@ -145,3 +138,4 @@
     ]
 </div>
 </div>
+</body></html>

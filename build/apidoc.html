@@ -61,12 +61,81 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.falafel">module falafel</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falafel.falafel">
+            function <span class="apidocSignatureSpan"></span>falafel
+            <span class="apidocSignatureSpan">(src, opts, fn)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.falafel" id="apidoc.module.falafel">module falafel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.falafel.falafel" id="apidoc.element.falafel.falafel">
+        function <span class="apidocSignatureSpan"></span>falafel
+        <span class="apidocSignatureSpan">(src, opts, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">falafel = function (src, opts, fn) {
+    if (typeof opts === &#x27;function&#x27;) {
+        fn = opts;
+        opts = {};
+    }
+    if (src &#x26;&#x26; typeof src === &#x27;object&#x27; &#x26;&#x26; src.constructor.name === &#x27;Buffer&#x27;) {
+        src = src.toString();
+    }
+    else if (src &#x26;&#x26; typeof src === &#x27;object&#x27;) {
+        opts = src;
+        src = opts.source;
+        delete opts.source;
+    }
+    src = src === undefined ? opts.source : src;
+    if (typeof src !== &#x27;string&#x27;) src = String(src);
+    if (opts.parser) parse = opts.parser.parse;
+    var ast = parse(src, opts);
+
+    var result = {
+        chunks : src.split(&#x27;&#x27;),
+        toString : function () { return result.chunks.join(&#x27;&#x27;) },
+        inspect : function () { return result.toString() }
+    };
+    var index = 0;
+
+    (function walk (node, parent) {
+        insertHelpers(node, parent, result.chunks);
+
+        forEach(objectKeys(node), function (key) {
+            if (key === &#x27;parent&#x27;) return;
+
+            var child = node[key];
+            if (isArray(child)) {
+                forEach(child, function (c) {
+                    if (c &#x26;&#x26; typeof c.type === &#x27;string&#x27;) {
+                        walk(c, node);
+                    }
+                });
+            }
+            else if (child &#x26;&#x26; typeof child.type === &#x27;string&#x27;) {
+                walk(child, node);
+            }
+        });
+        fn(node);
+    })(ast, undefined);
+
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
