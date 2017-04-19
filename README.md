@@ -1,9 +1,14 @@
-# api documentation for  [falafel (v2.1.0)](https://github.com/substack/node-falafel#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-falafel.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-falafel) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-falafel.svg)](https://travis-ci.org/npmdoc/node-npmdoc-falafel)
+# npmdoc-falafel
+
+#### api documentation for  [falafel (v2.1.0)](https://github.com/substack/node-falafel#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-falafel.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-falafel) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-falafel.svg)](https://travis-ci.org/npmdoc/node-npmdoc-falafel)
+
 #### transform the ast on a recursive walk
 
-[![NPM](https://nodei.co/npm/falafel.png?downloads=true)](https://www.npmjs.com/package/falafel)
+[![NPM](https://nodei.co/npm/falafel.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/falafel)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-falafel/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-falafel_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-falafel/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-falafel/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-falafel/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-falafel/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-falafel/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-falafel/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "James Halliday",
-        "email": "mail@substack.net",
         "url": "http://substack.net"
     },
     "bugs": {
@@ -62,29 +66,23 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "substack",
-            "email": "mail@substack.net"
+            "name": "substack"
         },
         {
-            "name": "bobthecow",
-            "email": "npm@0x7f.us"
+            "name": "bobthecow"
         },
         {
-            "name": "nanodeath",
-            "email": "nanodeath@gmail.com"
+            "name": "nanodeath"
         },
         {
-            "name": "alltom",
-            "email": "tom@alltom.com"
+            "name": "alltom"
         },
         {
-            "name": "eugeneware",
-            "email": "eugene@noblesamurai.com"
+            "name": "eugeneware"
         }
     ],
     "name": "falafel",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/substack/node-falafel.git"
@@ -120,16 +118,6 @@
     "version": "2.1.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module falafel](#apidoc.module.falafel)
-
-
-
-# <a name="apidoc.module.falafel"></a>[module falafel](#apidoc.module.falafel)
 
 
 
