@@ -1,6 +1,6 @@
 # npmdoc-falafel
 
-#### api documentation for  [falafel (v2.1.0)](https://github.com/substack/node-falafel#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-falafel.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-falafel) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-falafel.svg)](https://travis-ci.org/npmdoc/node-npmdoc-falafel)
+#### basic api documentation for  [falafel (v2.1.0)](https://github.com/substack/node-falafel#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-falafel.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-falafel) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-falafel.svg)](https://travis-ci.org/npmdoc/node-npmdoc-falafel)
 
 #### transform the ast on a recursive walk
 
@@ -115,7 +115,8 @@
         },
         "files": "test/*.js"
     },
-    "version": "2.1.0"
+    "version": "2.1.0",
+    "bin": {}
 }
 ```
 
